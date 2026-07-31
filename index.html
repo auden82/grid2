@@ -16,18 +16,27 @@
       color: #fff;
     }
 
+    /* Banner container */
+    .banner-wrapper {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Desktop banner */
     .banner {
       width: 60%;
       height: auto;
       display: block;
       margin: 0 auto;
-      padding: 0;
     }
 
+    /* Form */
     .form-wrapper {
+      width: 100%;
       margin: 0;
       padding: 0;
-      width: 100%;
     }
 
     .signup-form {
@@ -40,12 +49,26 @@
       border: 0;
     }
 
+    /* Mobile */
     @media (max-width: 600px) {
-      .banner {
+
+      .banner-wrapper {
         width: 100%;
+        overflow: hidden;
+      }
+
+      .banner {
+        width: 166.67%;
+        max-width: none;
+        height: auto;
+
+        /* Centre the image so both sides are cropped */
+        margin-left: -33.335%;
+        margin-right: 0;
       }
 
       .signup-form {
+        width: 100%;
         height: 750px;
       }
     }
@@ -54,11 +77,13 @@
 
 <body>
 
-  <img
-    class="banner"
-    src="grid2home.png"
-    alt="GRID2"
-  >
+  <div class="banner-wrapper">
+    <img
+      class="banner"
+      src="grid2home.png"
+      alt="GRID2"
+    >
+  </div>
 
   <div class="form-wrapper">
     <iframe
