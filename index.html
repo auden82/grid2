@@ -9,7 +9,12 @@
   <link rel="icon" type="image/png" href="favicon.png?v=2">
 
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
       margin: 0;
       padding: 0;
       background: #000;
@@ -17,20 +22,13 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* =========================
-       BANNER
-       Original image: 2024 × 777
-       ========================= */
-
+    /* Banner: original image 2024 × 777 */
     .banner-wrapper {
       width: 60%;
       margin: 0 auto;
-      padding: 0;
       overflow: hidden;
 
-      /* Desktop:
-         show top 80% of image,
-         cropping bottom 20% */
+      /* Desktop: bottom 20% cropped */
       aspect-ratio: 2024 / 621.6;
     }
 
@@ -38,112 +36,82 @@
       display: block;
       width: 100%;
       height: auto;
-      margin: 0;
-      padding: 0;
     }
 
-    /* =========================
-       PRICING LINK
-       ========================= */
+    .home-content {
+      width: 90%;
+      max-width: 800px;
+      margin: 35px auto 80px;
+      text-align: center;
+    }
+
+    .home-content h1 {
+      margin: 0 0 18px;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      line-height: 1.3;
+    }
+
+    .home-content p {
+      margin: 0 0 28px;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
     .pricing-link {
-      display: block;
-      width: fit-content;
-      margin: 20px auto;
-      padding: 10px 20px;
-
+      display: inline-block;
+      padding: 12px 22px;
       color: #fff;
       text-decoration: none;
-
-      font-size: 16px;
+      border: 1px solid #fff;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 2px;
     }
 
     .pricing-link:hover {
-      text-decoration: underline;
+      background: #fff;
+      color: #000;
     }
-
-    /* =========================
-       FORM
-       ========================= */
-
-    .form-wrapper {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .signup-form {
-      display: block;
-      width: 100%;
-      max-width: 540px;
-      height: 650px;
-
-      margin: 0 auto;
-      padding: 0;
-      border: 0;
-    }
-
-    /* =========================
-       MOBILE
-       ========================= */
 
     @media (max-width: 600px) {
 
+      /* Mobile:
+         crop 20% left/right
+         crop 20% top/bottom */
       .banner-wrapper {
         width: 100%;
-        overflow: hidden;
-
-        /*
-          Show central 60% vertically.
-          Original:
-          2024 × 777
-
-          Central crop:
-          1214.4 × 466.2
-        */
         aspect-ratio: 1214.4 / 466.2;
       }
 
       .banner {
-        /*
-          Enlarge to show central
-          60% of original width.
-        */
         width: 166.6667%;
         max-width: none;
-        height: auto;
-
-        /*
-          Centre horizontally,
-          cropping left + right.
-        */
         margin-left: -33.33335%;
-
-        /*
-          Crop top 20%.
-        */
         transform: translateY(-20%);
       }
 
-      .pricing-link {
-        margin: 16px auto;
+      .home-content {
+        margin-top: 28px;
+        padding: 0 16px;
+      }
+
+      .home-content h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+
+      .home-content p {
         font-size: 15px;
       }
-
-      .signup-form {
-        width: 100%;
-        height: 750px;
-      }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- GRID2 Banner -->
   <div class="banner-wrapper">
     <img
       class="banner"
@@ -152,25 +120,20 @@
     >
   </div>
 
-  <!-- Pricing -->
-  <a
-    class="pricing-link"
-    href="pricing.html"
-  >
-    VIEW PRICING
-  </a>
+  <main class="home-content">
 
-  <!-- Brevo Signup Form -->
-  <div class="form-wrapper">
+    <h1>MARKETING SHOULDN'T NEED A QUOTE.</h1>
 
-    <iframe
-      class="signup-form"
-      src="https://0ae01892.sibforms.com/v2/serve/MUIFAC2kmGAaZedvOkD_DE6kt-66hA_w9ISauju7oN-yyLEl3_G_0S_eZZCLqJwks7ntVn_MA8v1CBPFnqGnouHObSW_eMDyE8Cj-xE8Osh-uaq2PlmDZ5ZcDMrk5z3SUAgvlVfuDKI1KOxqCC5FK9g0_kFzbI34GDL-ewqXjEBf6_rj_OcAQ4GfMEqzukdo6umfmYPeDNBvHYolBA=="
-      scrolling="no"
-      allowfullscreen>
-    </iframe>
+    <p>
+      Strategy. Creative. Digital.<br>
+      Transparent fixed pricing.
+    </p>
 
-  </div>
+    <a class="pricing-link" href="pricing.html">
+      VIEW PRICING
+    </a>
+
+  </main>
 
 </body>
 </html>
