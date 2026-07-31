@@ -23,12 +23,7 @@
     href="favicon.png?v=2"
   >
 
-
   <style>
-
-    /* ==================================================
-       GLOBAL
-       ================================================== */
 
     * {
       box-sizing: border-box;
@@ -38,107 +33,86 @@
     body {
       margin: 0;
       padding: 0;
-
       background: #000;
       color: #fff;
-
       font-family: Arial, Helvetica, sans-serif;
     }
 
-
-    /* ==================================================
-       GRID2 BANNER
-       Original image: 2024 × 777
+    /* =========================
+       BANNER
+       Original: 2024 × 777
 
        Desktop:
-       60% page width
+       60% width
        bottom 20% cropped
 
        Mobile:
        central 60% width
-       top 20% cropped
-       bottom 20% cropped
-       ================================================== */
+       top/bottom 20% cropped
+       ========================= */
 
     .banner-wrapper {
       width: 60%;
-
       margin: 0 auto;
       padding: 0;
-
       overflow: hidden;
-
       aspect-ratio: 2024 / 621.6;
     }
 
     .banner {
       display: block;
-
       width: 100%;
       height: auto;
-
       margin: 0;
       padding: 0;
     }
 
-
-    /* ==================================================
-       MAIN PAGE
-       ================================================== */
+    /* =========================
+       PAGE
+       ========================= */
 
     .page {
       width: 90%;
       max-width: 900px;
-
       margin: 35px auto 80px;
       padding: 0 20px;
     }
 
-
-    /* ==================================================
+    /* =========================
        INTRO
-       ================================================== */
+       ========================= */
 
     .intro {
       margin-bottom: 65px;
-
       text-align: center;
     }
 
     .intro h1 {
       margin: 0 0 18px;
-
       font-size: 32px;
       font-weight: 600;
-
       letter-spacing: 4px;
       line-height: 1.3;
     }
 
     .intro .lead {
       margin: 0 0 10px;
-
       font-size: 20px;
       font-weight: 500;
-
       line-height: 1.5;
     }
 
     .intro .subline {
       max-width: 650px;
-
       margin: 0 auto;
-
       color: #999;
-
       font-size: 15px;
       line-height: 1.7;
     }
 
-
-    /* ==================================================
-       CATEGORY
-       ================================================== */
+    /* =========================
+       PRICING SECTIONS
+       ========================= */
 
     .pricing-section {
       margin-bottom: 60px;
@@ -147,62 +121,51 @@
     .pricing-section h2 {
       margin: 0 0 18px;
       padding-bottom: 11px;
-
       border-bottom: 1px solid #333;
 
       font-size: 18px;
       font-weight: 600;
-
       letter-spacing: 3px;
     }
 
-
-    /* ==================================================
-       SERVICE ROW
-       ================================================== */
+    /* =========================
+       SERVICE ROWS
+       ========================= */
 
     .price-row {
       display: flex;
-
       justify-content: space-between;
       align-items: center;
 
       gap: 35px;
 
       padding: 18px 0;
-
       border-bottom: 1px solid #181818;
     }
 
     .service-info {
       display: flex;
       flex: 1;
-
       flex-direction: column;
-
       gap: 5px;
     }
 
     .service {
       font-size: 15px;
       font-weight: 500;
-
       line-height: 1.4;
     }
 
     .description {
       max-width: 650px;
-
       color: #888;
-
       font-size: 13px;
       line-height: 1.55;
     }
 
-
-    /* ==================================================
+    /* =========================
        CLICKABLE PRICE
-       ================================================== */
+       ========================= */
 
     .price-link {
       flex-shrink: 0;
@@ -210,28 +173,26 @@
       padding: 10px 0 10px 20px;
 
       color: #fff;
-
       font-size: 15px;
       font-weight: 600;
 
       text-decoration: none;
       white-space: nowrap;
-
       cursor: pointer;
+
+      transition: opacity 0.2s ease;
     }
 
     .price-link:hover {
-      text-decoration: underline;
+      opacity: 0.65;
     }
 
-
-    /* ==================================================
+    /* =========================
        PRICING PROMISE
-       ================================================== */
+       ========================= */
 
     .pricing-promise {
       margin: 80px 0 60px;
-
       text-align: center;
     }
 
@@ -247,23 +208,19 @@
 
     .pricing-promise p {
       max-width: 650px;
-
       margin: 0 auto 12px;
 
       color: #999;
-
       font-size: 15px;
       line-height: 1.7;
     }
 
-
-    /* ==================================================
+    /* =========================
        SIGNUP
-       ================================================== */
+       ========================= */
 
     .signup-section {
       margin: 75px auto 20px;
-
       text-align: center;
     }
 
@@ -272,15 +229,12 @@
 
       font-size: 20px;
       font-weight: 600;
-
       letter-spacing: 3px;
     }
 
     .signup-section p {
       margin: 0 0 20px;
-
       color: #999;
-
       font-size: 15px;
       line-height: 1.6;
     }
@@ -290,7 +244,6 @@
 
       width: 100%;
       max-width: 540px;
-
       height: 650px;
 
       margin: 0 auto;
@@ -299,52 +252,45 @@
       border: 0;
     }
 
-
-    /* ==================================================
+    /* =========================
        FOOTER
-       ================================================== */
+       ========================= */
 
     .footer {
       padding: 40px 20px 60px;
 
       color: #555;
-
       font-size: 12px;
 
       text-align: center;
       letter-spacing: 1px;
     }
 
-
-    /* ==================================================
+    /* =========================
        MOBILE
-       ================================================== */
+       ========================= */
 
     @media (max-width: 600px) {
 
       .banner-wrapper {
         width: 100%;
-
         aspect-ratio: 1214.4 / 466.2;
       }
 
       .banner {
         width: 166.6667%;
         max-width: none;
+        height: auto;
 
         margin-left: -33.33335%;
-
         transform: translateY(-20%);
       }
 
-
       .page {
         width: 100%;
-
         margin-top: 28px;
         padding: 0 22px;
       }
-
 
       .intro {
         margin-bottom: 50px;
@@ -352,7 +298,6 @@
 
       .intro h1 {
         font-size: 24px;
-
         letter-spacing: 2px;
       }
 
@@ -364,15 +309,12 @@
         font-size: 14px;
       }
 
-
       .pricing-section {
         margin-bottom: 50px;
       }
 
-
       .price-row {
         gap: 16px;
-
         padding: 16px 0;
       }
 
@@ -386,10 +328,8 @@
 
       .price-link {
         padding-left: 5px;
-
         font-size: 14px;
       }
-
 
       .pricing-promise {
         margin-top: 65px;
@@ -397,10 +337,8 @@
 
       .pricing-promise h2 {
         font-size: 18px;
-
         letter-spacing: 2px;
       }
-
 
       .signup-form {
         height: 750px;
@@ -416,9 +354,9 @@
 <body>
 
 
-  <!-- ==================================================
-       GRID2
-       ================================================== -->
+  <!-- =========================
+       GRID2 BANNER
+       ========================= -->
 
   <header class="banner-wrapper">
 
@@ -431,13 +369,12 @@
   </header>
 
 
-
   <main class="page">
 
 
-    <!-- ==================================================
+    <!-- =========================
          INTRO
-         ================================================== -->
+         ========================= -->
 
     <section class="intro">
 
@@ -450,7 +387,7 @@
       </p>
 
       <p class="subline">
-        Straightforward marketing services for Hampshire businesses,
+        Straightforward marketing services for Hampshire businesses
         with transparent fixed pricing.
         Choose what you need. See what it costs.
       </p>
@@ -458,10 +395,9 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =========================
          STRATEGY
-         ================================================== -->
+         ========================= -->
 
     <section class="pricing-section">
 
@@ -473,7 +409,7 @@
         <div class="service-info">
 
           <span class="service">
-            Marketing Consultation — 1 Hour
+            Marketing Consultation
           </span>
 
           <span class="description">
@@ -485,13 +421,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/00w00k74g4PH5qEcPa1ck02"
+          href="https://buy.stripe.com/9B67sMdsEgypaKYbL61ck0r"
         >
           £75
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -511,13 +446,112 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/4gM28s3S495X3iweXi1ck01"
+          href="https://buy.stripe.com/cNieVegEQ95X4mAcPa1ck0q"
         >
           £149
         </a>
 
       </div>
 
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Marketing Strategy
+          </span>
+
+          <span class="description">
+            A practical marketing strategy covering your audience,
+            positioning, priorities, channels and roadmap for growth.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/fZu5kEfAM4PHf1e5mI1ck0p"
+        >
+          £399
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Brand &amp; Positioning Sprint
+          </span>
+
+          <span class="description">
+            Clarify your proposition, target audience,
+            positioning and messaging to strengthen your brand.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/dRm6oI3S43LDcT67uQ1ck06"
+        >
+          £495
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Campaign Strategy
+          </span>
+
+          <span class="description">
+            A campaign plan covering objectives, audience,
+            messaging, channels and recommended activity.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/28E8wQ3S4dmd3iw4iE1ck05"
+        >
+          £349
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Social Media Strategy
+          </span>
+
+          <span class="description">
+            A clear plan covering your audience, platforms,
+            content direction and social media priorities.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/00w14odsEbe52esbL61ck04"
+        >
+          £249
+        </a>
+
+      </div>
 
 
       <div class="price-row">
@@ -537,113 +571,9 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/eVq4gA9co2HzcT68yU1ck03"
+          href="https://buy.stripe.com/8x2cN6coA95XcT66qM1ck0o"
         >
           £199
-        </a>
-
-      </div>
-
-
-
-      <div class="price-row">
-
-        <div class="service-info">
-
-          <span class="service">
-            Social Media Strategy
-          </span>
-
-          <span class="description">
-            A clear plan covering your audience, platforms,
-            content direction and social priorities.
-          </span>
-
-        </div>
-
-        <a
-          class="price-link"
-          href="https://buy.stripe.com/00w14odsEbe52esbL61ck04"
-        >
-          £249
-        </a>
-
-      </div>
-
-
-
-      <div class="price-row">
-
-        <div class="service-info">
-
-          <span class="service">
-            Campaign Strategy
-          </span>
-
-          <span class="description">
-            Campaign objectives, audience, messaging,
-            channels and recommended activation plan.
-          </span>
-
-        </div>
-
-        <a
-          class="price-link"
-          href="https://buy.stripe.com/28E8wQ3S4dmd3iw4iE1ck05"
-        >
-          £349
-        </a>
-
-      </div>
-
-
-
-      <div class="price-row">
-
-        <div class="service-info">
-
-          <span class="service">
-            Marketing Strategy
-          </span>
-
-          <span class="description">
-            A practical strategy covering audience, positioning,
-            priorities, channels and a roadmap for growth.
-          </span>
-
-        </div>
-
-        <a
-          class="price-link"
-          href="https://buy.stripe.com/dRm6oI3S43LDcT67uQ1ck06"
-        >
-          £399
-        </a>
-
-      </div>
-
-
-
-      <div class="price-row">
-
-        <div class="service-info">
-
-          <span class="service">
-            Brand &amp; Positioning Sprint
-          </span>
-
-          <span class="description">
-            Clarify your proposition, audience, positioning
-            and messaging to strengthen how your brand competes.
-          </span>
-
-        </div>
-
-        <a
-          class="price-link"
-          href="https://buy.stripe.com/5kQeVeewI0zr6uI16s1ck07"
-        >
-          £495
         </a>
 
       </div>
@@ -651,16 +581,16 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =========================
          CONTENT & CREATIVE
-         ================================================== -->
+         ========================= -->
 
     <section class="pricing-section">
 
       <h2>CONTENT &amp; CREATIVE</h2>
 
 
+      <!-- PHOTOGRAPHY -->
 
       <div class="price-row">
 
@@ -679,13 +609,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/bJedRacoA95X8CQ8yU1ck08"
+          href="https://buy.stripe.com/9B6aEY0FSdmd06kcPa1ck0k"
         >
           £295
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -697,15 +626,15 @@
           </span>
 
           <span class="description">
-            A full-day shoot creating a broader library of
-            professional imagery for your brand and marketing.
+            A full-day shoot creating a broader library
+            of professional imagery for your brand and marketing.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/14AaEY60c95X06k8yU1ck09"
+          href="https://buy.stripe.com/5kQ8wQdsE2HzaKY6qM1ck0n"
         >
           £495
         </a>
@@ -713,6 +642,7 @@
       </div>
 
 
+      <!-- VIDEO -->
 
       <div class="price-row">
 
@@ -723,7 +653,7 @@
           </span>
 
           <span class="description">
-            Turn your supplied footage into one polished
+            Turn your supplied footage into one polished,
             short-form video ready for social media.
           </span>
 
@@ -731,13 +661,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/fZu14ogEQ5TLbP2aH21ck0a"
+          href="https://buy.stripe.com/14A6oI2O03LD3iwaH21ck0s"
         >
           £49
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -757,13 +686,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/fZu28sdsE6XPg5ieXi1ck0b"
+          href="https://buy.stripe.com/28EfZi4W80zrg5ieXi1ck0t"
         >
           £199
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -775,15 +703,15 @@
           </span>
 
           <span class="description">
-            Ten edited short-form videos giving you a bank
-            of ready-to-publish social content.
+            Ten professionally edited short-form videos
+            giving you a bank of ready-to-publish content.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/eVq3cw60c2HzcT6dTe1ck0c"
+          href="https://buy.stripe.com/14A3cw2O06XPdXabL61ck0m"
         >
           £349
         </a>
@@ -791,13 +719,14 @@
       </div>
 
 
+      <!-- SOCIAL -->
 
       <div class="price-row">
 
         <div class="service-info">
 
           <span class="service">
-            Social Post — Single
+            Social Post
           </span>
 
           <span class="description">
@@ -809,13 +738,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/cNi3cw0FS3LD5qE16s1ck0d"
+          href="https://buy.stripe.com/5kQeVeewI0zr6uI16s1ck07"
         >
           £39
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -827,15 +755,15 @@
           </span>
 
           <span class="description">
-            Ten branded social assets creating a consistent
-            bank of content ready for publishing.
+            Ten branded social media assets creating
+            a consistent bank of ready-to-publish content.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/9B6bJ23S495XdXacPa1ck0e"
+          href="https://buy.stripe.com/3cIeVe0FS1Dv4mA3eA1ck0u"
         >
           £149
         </a>
@@ -843,6 +771,7 @@
       </div>
 
 
+      <!-- DIGITAL BANNERS -->
 
       <div class="price-row">
 
@@ -861,13 +790,12 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/4gM4gA3S43LDdXa8yU1ck0f"
+          href="https://buy.stripe.com/bJedRacoA95X8CQ8yU1ck08"
         >
           £49
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -879,21 +807,20 @@
           </span>
 
           <span class="description">
-            One creative design adapted into five digital
-            advertising formats for your campaign.
+            One creative direction adapted into five
+            digital advertising formats for your campaign.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/3cI5kE9coeqhaKY7uQ1ck0g"
+          href="https://buy.stripe.com/cNi3cw0FS3LD5qE16s1ck0d"
         >
           £125
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -913,9 +840,265 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/14A28s60c1DvcT67uQ1ck0h"
+          href="https://buy.stripe.com/4gM4gA3S43LDdXa8yU1ck0f"
         >
           £199
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Animated Banner Set
+          </span>
+
+          <span class="description">
+            Animated digital advertising creative designed
+            to add movement and attention to your campaign.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/6oUdRafAMci9dXa02o1ck0j"
+        >
+          £249
+        </a>
+
+      </div>
+
+
+      <!-- PRINT & DESIGN -->
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Flyer / Leaflet
+          </span>
+
+          <span class="description">
+            A professionally designed flyer or leaflet
+            built around your message and brand.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/14AaEY60c95X06k8yU1ck09"
+        >
+          £79
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Poster / Advert
+          </span>
+
+          <span class="description">
+            One professionally designed promotional poster
+            or advert supplied ready for digital or print use.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/fZu14ogEQ5TLbP2aH21ck0a"
+        >
+          £79
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Brochure Design
+          </span>
+
+          <span class="description">
+            Professional brochure design to present your
+            business, products or services clearly and consistently.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/4gM00kewIeqh9GU6qM1ck0v"
+        >
+          from £199
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Presentation / Pitch Deck
+          </span>
+
+          <span class="description">
+            A professionally designed presentation that
+            turns your content into a clear visual story.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/00wfZi9cobe57yM16s1ck0i"
+        >
+          £199
+        </a>
+
+      </div>
+
+
+      <!-- BRAND -->
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Logo Refresh
+          </span>
+
+          <span class="description">
+            Refine and modernise your existing logo while
+            retaining the identity your customers recognise.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/9B6bJ23S495XdXacPa1ck0e"
+        >
+          £149
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Brand Starter Kit
+          </span>
+
+          <span class="description">
+            A practical visual identity package giving
+            your business the core assets needed for consistency.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/00wbJ2gEQci91ao8yU1ck0l"
+        >
+          £299
+        </a>
+
+      </div>
+
+
+      <!-- COPY -->
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Website Copy
+          </span>
+
+          <span class="description">
+            Clear, engaging copy for one website page,
+            written around your audience and objective.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/6oUaEYfAM6XP4mA9CY1ck0w"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Blog / Article
+          </span>
+
+          <span class="description">
+            An engaging, structured article written around
+            your chosen topic, audience and brand.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/fZu28sdsE6XPg5ieXi1ck0b"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Press Release
+          </span>
+
+          <span class="description">
+            A professionally structured press release
+            turning your news into a clear media-ready story.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/eVq3cw60c2HzcT6dTe1ck0c"
+        >
+          £99
         </a>
 
       </div>
@@ -923,16 +1106,16 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =========================
          DIGITAL
-         ================================================== -->
+         ========================= -->
 
     <section class="pricing-section">
 
       <h2>DIGITAL</h2>
 
 
+      <!-- META -->
 
       <div class="price-row">
 
@@ -943,21 +1126,20 @@
           </span>
 
           <span class="description">
-            Set up the essential foundations needed to
-            start advertising through Meta.
+            Get the essential Meta advertising foundations
+            configured correctly and ready to use.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/00wfZi9cobe57yM16s1ck0i"
+          href="https://buy.stripe.com/14A7sM4W85TL5qEcPa1ck0x"
         >
           £99
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -969,21 +1151,20 @@
           </span>
 
           <span class="description">
-            A Meta campaign configured around your objective,
-            audience, placements and budget.
+            A Meta advertising campaign configured around
+            your objective, audience, placements and budget.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/6oUdRafAMci9dXa02o1ck0j"
+          href="https://buy.stripe.com/eVq7sMbkw3LD2es2aw1ck0y"
         >
           £149
         </a>
 
       </div>
-
 
 
       <div class="price-row">
@@ -995,15 +1176,15 @@
           </span>
 
           <span class="description">
-            Meta campaign setup combined with advertising
-            creative and copy ready for launch.
+            Campaign setup plus advertising creative and copy,
+            giving you a complete campaign ready to launch.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/9B6aEY0FSdmd06kcPa1ck0k"
+          href="https://buy.stripe.com/bJeaEYewIbe5f1e5mI1ck0z"
         >
           £249
         </a>
@@ -1011,6 +1192,32 @@
       </div>
 
 
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Meta Campaign + 5 Assets
+          </span>
+
+          <span class="description">
+            A complete Meta campaign setup with five
+            branded creative assets for your advertising.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/8x26oIfAM2Hz1ao6qM1ck0A"
+        >
+          £349
+        </a>
+
+      </div>
+
+
+      <!-- GOOGLE -->
 
       <div class="price-row">
 
@@ -1022,20 +1229,123 @@
 
           <span class="description">
             A structured Google Ads campaign built around
-            your business, objectives and relevant searches.
+            your objectives and relevant search opportunities.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/00wbJ2gEQci91ao8yU1ck0l"
+          href="https://buy.stripe.com/28E4gA60c1DvaKY16s1ck0B"
         >
           £149
         </a>
 
       </div>
 
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Google Business Profile Setup
+          </span>
+
+          <span class="description">
+            Set up and optimise your Google Business Profile
+            so customers can find your business more easily.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/bJeaEY0FSful06kcPa1ck0C"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <!-- SOCIAL PROFILES -->
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Social Profile Setup
+          </span>
+
+          <span class="description">
+            Set up or optimise your key social profiles
+            with consistent branding and business information.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/6oU5kE9co2Hz7yM4iE1ck0D"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            LinkedIn Company Page Setup
+          </span>
+
+          <span class="description">
+            A professionally configured LinkedIn company page
+            with your core branding and information in place.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/fZuaEY2O06XP3iw5mI1ck0E"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <!-- EMAIL -->
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Email Template
+          </span>
+
+          <span class="description">
+            A reusable branded email template designed
+            to make future campaigns faster and more consistent.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/cNiaEYbkweqhdXacPa1ck0F"
+        >
+          £99
+        </a>
+
+      </div>
 
 
       <div class="price-row">
@@ -1047,15 +1357,15 @@
           </span>
 
           <span class="description">
-            A complete marketing email combining copy,
-            layout and campaign setup ready to send.
+            A complete marketing email combining messaging,
+            copy, layout and campaign setup ready to send.
           </span>
 
         </div>
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/14A3cw2O06XPdXabL61ck0m"
+          href="https://buy.stripe.com/fZu4gA60cci99GU6qM1ck0G"
         >
           £149
         </a>
@@ -1063,6 +1373,32 @@
       </div>
 
 
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Newsletter Setup
+          </span>
+
+          <span class="description">
+            Set up the foundations for your business newsletter,
+            including structure, template and essential configuration.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/7sY14o3S41Dv3iw8yU1ck0H"
+        >
+          £149
+        </a>
+
+      </div>
+
+
+      <!-- WEB -->
 
       <div class="price-row">
 
@@ -1073,7 +1409,7 @@
           </span>
 
           <span class="description">
-            A focused responsive landing page built around
+            A focused responsive landing page designed around
             one campaign, offer or conversion objective.
           </span>
 
@@ -1081,9 +1417,84 @@
 
         <a
           class="price-link"
-          href="https://buy.stripe.com/5kQ8wQdsE2HzaKY6qM1ck0n"
+          href="https://buy.stripe.com/aFa7sMbkw6XP7yMg1m1ck0I"
         >
           £299
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            Website Health Check
+          </span>
+
+          <span class="description">
+            A practical review of your website covering usability,
+            content, mobile experience and marketing opportunities.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/28EdRa60ceqh9GUbL61ck0J"
+        >
+          £99
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            SEO Audit
+          </span>
+
+          <span class="description">
+            A straightforward review of your site's search visibility,
+            content and technical basics with clear recommendations.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/dRm3cw88kci97yM7uQ1ck0K"
+        >
+          £149
+        </a>
+
+      </div>
+
+
+      <div class="price-row">
+
+        <div class="service-info">
+
+          <span class="service">
+            5-Page Website
+          </span>
+
+          <span class="description">
+            A clean, responsive five-page website for businesses
+            that need a professional online presence.
+          </span>
+
+        </div>
+
+        <a
+          class="price-link"
+          href="https://buy.stripe.com/fZucN62O0be5g5i8yU1ck0L"
+        >
+          £895
         </a>
 
       </div>
@@ -1091,10 +1502,9 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =========================
          PRICING PROMISE
-         ================================================== -->
+         ========================= -->
 
     <section class="pricing-promise">
 
@@ -1103,13 +1513,12 @@
       </h2>
 
       <p>
-        Every service has a defined scope,
-        deliverables and price before work begins.
+        Every service has a defined scope, deliverables
+        and price before work begins.
       </p>
 
       <p>
-        No hourly billing.
-        No mandatory retainers.
+        No hourly billing. No mandatory retainers.
         No surprise agency fees.
       </p>
 
@@ -1121,10 +1530,9 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =========================
          SIGNUP
-         ================================================== -->
+         ========================= -->
 
     <section class="signup-section">
 
@@ -1146,9 +1554,7 @@
 
     </section>
 
-
   </main>
-
 
 
   <footer class="footer">
