@@ -3,51 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>GRID2</title>
 
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-  }
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  .banner {
-    width: 60%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+    }
 
-  .content {
-    padding: 20px;
-    color: white;
-  }
-
-  @media (max-width: 600px) {
     .banner {
+      width: 60%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .form-wrapper {
+      margin: 0;
+      padding: 0;
       width: 100%;
     }
-  }
-</style>
+
+    .signup-form {
+      display: block;
+      width: 100%;
+      max-width: 540px;
+      height: 650px;
+      margin: 0 auto;
+      padding: 0;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        width: 100%;
+      }
+
+      .signup-form {
+        height: 750px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <img class="banner" src="grid2home.png" alt="GRID2">
+  <img
+    class="banner"
+    src="grid2home.png"
+    alt="GRID2"
+  >
 
-  <div class="content">
-   <iframe
-  src="https://0ae01892.sibforms.com/v2/serve/MUIFAC2kmGAaZedvOkD_DE6kt-66hA_w9ISauju7oN-yyLEl3_G_0S_eZZCLqJwks7ntVn_MA8v1CBPFnqGnouHObSW_eMDyE8Cj-xE8Osh-uaq2PlmDZ5ZcDMrk5z3SUAgvlVfuDKI1KOxqCC5FK9g0_kFzbI34GDL-ewqXjEBf6_rj_OcAQ4GfMEqzukdo6umfmYPeDNBvHYolBA=="
-  frameborder="0"
-  scrolling="no"
-  style="
-    display: block;
-    width: 100%;
-    max-width: 540px;
-    height: 650px;
-    margin: 0 auto;
-    border: 0;
-  ">
+  <div class="form-wrapper">
+    <iframe
+      class="signup-form"
+      src="https://0ae01892.sibforms.com/v2/serve/MUIFAC2kmGAaZedvOkD_DE6kt-66hA_w9ISauju7oN-yyLEl3_G_0S_eZZCLqJwks7ntVn_MA8v1CBPFnqGnouHObSW_eMDyE8Cj-xE8Osh-uaq2PlmDZ5ZcDMrk5z3SUAgvlVfuDKI1KOxqCC5FK9g0_kFzbI34GDL-ewqXjEBf6_rj_OcAQ4GfMEqzukdo6umfmYPeDNBvHYolBA=="
+      scrolling="no"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 </body>
 </html>
