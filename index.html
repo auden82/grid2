@@ -14,13 +14,12 @@
       padding: 0;
       background: #000;
       color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     /* =========================
-       DESKTOP BANNER
-       Original: 2024 × 777
-       Visible: 2024 × 621.6
-       Bottom 20% cropped
+       BANNER
+       Original image: 2024 × 777
        ========================= */
 
     .banner-wrapper {
@@ -29,7 +28,9 @@
       padding: 0;
       overflow: hidden;
 
-      /* 2024 / 621.6 */
+      /* Desktop:
+         show top 80% of image,
+         cropping bottom 20% */
       aspect-ratio: 2024 / 621.6;
     }
 
@@ -39,6 +40,28 @@
       height: auto;
       margin: 0;
       padding: 0;
+    }
+
+    /* =========================
+       PRICING LINK
+       ========================= */
+
+    .pricing-link {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      padding: 10px 20px;
+
+      color: #fff;
+      text-decoration: none;
+
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .pricing-link:hover {
+      text-decoration: underline;
     }
 
     /* =========================
@@ -56,6 +79,7 @@
       width: 100%;
       max-width: 540px;
       height: 650px;
+
       margin: 0 auto;
       padding: 0;
       border: 0;
@@ -63,8 +87,6 @@
 
     /* =========================
        MOBILE
-       Central 60% horizontally
-       Central 60% vertically
        ========================= */
 
     @media (max-width: 600px) {
@@ -74,37 +96,40 @@
         overflow: hidden;
 
         /*
-          Original central 60%:
-          width  = 2024 × .60 = 1214.4
-          height = 777 × .60  = 466.2
+          Show central 60% vertically.
+          Original:
+          2024 × 777
 
-          Aspect ratio of visible area:
-          1214.4 / 466.2
+          Central crop:
+          1214.4 × 466.2
         */
         aspect-ratio: 1214.4 / 466.2;
       }
 
       .banner {
         /*
-          Enlarge image so central 60%
-          fills the screen width.
+          Enlarge to show central
+          60% of original width.
         */
         width: 166.6667%;
         max-width: none;
         height: auto;
 
         /*
-          Crop 20% from left/right by
-          centring enlarged image.
+          Centre horizontally,
+          cropping left + right.
         */
         margin-left: -33.33335%;
 
         /*
           Crop top 20%.
-          The wrapper hides everything
-          below the central 60%.
         */
         transform: translateY(-20%);
+      }
+
+      .pricing-link {
+        margin: 16px auto;
+        font-size: 15px;
       }
 
       .signup-form {
@@ -112,11 +137,13 @@
         height: 750px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- GRID2 Banner -->
   <div class="banner-wrapper">
     <img
       class="banner"
@@ -125,6 +152,15 @@
     >
   </div>
 
+  <!-- Pricing -->
+  <a
+    class="pricing-link"
+    href="pricing.html"
+  >
+    VIEW PRICING
+  </a>
+
+  <!-- Brevo Signup Form -->
   <div class="form-wrapper">
 
     <iframe
