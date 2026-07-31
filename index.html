@@ -16,23 +16,35 @@
       color: #fff;
     }
 
-    /* Banner container */
+    /* =========================
+       DESKTOP BANNER
+       Original: 2024 × 777
+       Visible: 2024 × 621.6
+       Bottom 20% cropped
+       ========================= */
+
     .banner-wrapper {
-      width: 100%;
+      width: 60%;
+      margin: 0 auto;
+      padding: 0;
       overflow: hidden;
+
+      /* 2024 / 621.6 */
+      aspect-ratio: 2024 / 621.6;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      height: auto;
       margin: 0;
       padding: 0;
     }
 
-    /* Desktop banner */
-    .banner {
-      width: 60%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+    /* =========================
+       FORM
+       ========================= */
 
-    /* Form */
     .form-wrapper {
       width: 100%;
       margin: 0;
@@ -49,22 +61,50 @@
       border: 0;
     }
 
-    /* Mobile */
+    /* =========================
+       MOBILE
+       Central 60% horizontally
+       Central 60% vertically
+       ========================= */
+
     @media (max-width: 600px) {
 
       .banner-wrapper {
         width: 100%;
         overflow: hidden;
+
+        /*
+          Original central 60%:
+          width  = 2024 × .60 = 1214.4
+          height = 777 × .60  = 466.2
+
+          Aspect ratio of visible area:
+          1214.4 / 466.2
+        */
+        aspect-ratio: 1214.4 / 466.2;
       }
 
       .banner {
-        width: 166.67%;
+        /*
+          Enlarge image so central 60%
+          fills the screen width.
+        */
+        width: 166.6667%;
         max-width: none;
         height: auto;
 
-        /* Centre the image so both sides are cropped */
-        margin-left: -33.335%;
-        margin-right: 0;
+        /*
+          Crop 20% from left/right by
+          centring enlarged image.
+        */
+        margin-left: -33.33335%;
+
+        /*
+          Crop top 20%.
+          The wrapper hides everything
+          below the central 60%.
+        */
+        transform: translateY(-20%);
       }
 
       .signup-form {
@@ -86,12 +126,14 @@
   </div>
 
   <div class="form-wrapper">
+
     <iframe
       class="signup-form"
       src="https://0ae01892.sibforms.com/v2/serve/MUIFAC2kmGAaZedvOkD_DE6kt-66hA_w9ISauju7oN-yyLEl3_G_0S_eZZCLqJwks7ntVn_MA8v1CBPFnqGnouHObSW_eMDyE8Cj-xE8Osh-uaq2PlmDZ5ZcDMrk5z3SUAgvlVfuDKI1KOxqCC5FK9g0_kFzbI34GDL-ewqXjEBf6_rj_OcAQ4GfMEqzukdo6umfmYPeDNBvHYolBA=="
       scrolling="no"
       allowfullscreen>
     </iframe>
+
   </div>
 
 </body>
