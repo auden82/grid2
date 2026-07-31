@@ -4,21 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pricing | GRID2</title>
+  <title>GRID2</title>
 
   <link rel="icon" type="image/png" href="favicon.png?v=2">
 
   <style>
-
-    /* =========================
-       GLOBAL
-       ========================= */
-
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       background: #000;
@@ -26,119 +22,121 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* =========================
-       BANNER
-       Original: 2024 × 777
-       Desktop: bottom 20% cropped
-       ========================= */
-
+    /* Banner: original image 2024 × 777 */
     .banner-wrapper {
       width: 60%;
       margin: 0 auto;
-      padding: 0;
       overflow: hidden;
-      aspect-ratio: 2024 / 621.6;
-    }
 
-    .banner-wrapper a {
-      display: block;
+      /* Desktop: bottom 20% cropped */
+      aspect-ratio: 2024 / 621.6;
     }
 
     .banner {
       display: block;
       width: 100%;
       height: auto;
-      margin: 0;
-      padding: 0;
     }
 
-    /* =========================
-       PRICING CONTENT
-       ========================= */
-
-    .pricing {
+    .home-content {
       width: 90%;
-      max-width: 900px;
-      margin: 20px auto 80px;
-      padding: 0 20px;
-    }
-
-    .intro {
+      max-width: 800px;
+      margin: 35px auto 80px;
       text-align: center;
-      margin-bottom: 60px;
     }
 
-    h1 {
-      margin: 0 0 20px;
-      font-size: 34px;
-      letter-spacing: 5px;
+    .home-content h1 {
+      margin: 0 0 18px;
+      font-size: 28px;
       font-weight: 600;
+      letter-spacing: 3px;
+      line-height: 1.3;
     }
 
-    .tagline {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .subline {
-      margin: 0;
+    .home-content p {
+      margin: 0 0 28px;
       color: #aaa;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* =========================
-       SECTIONS
-       ========================= */
-
-    .pricing-section {
-      margin-bottom: 55px;
-    }
-
-    .pricing-section h2 {
-      margin: 0 0 18px;
-      padding-bottom: 10px;
-
-      font-size: 18px;
-      letter-spacing: 3px;
+    .pricing-link {
+      display: inline-block;
+      padding: 12px 22px;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      font-size: 14px;
       font-weight: 600;
-
-      border-bottom: 1px solid #333;
+      letter-spacing: 2px;
     }
 
-    /* =========================
-       PRICE ROWS
-       ========================= */
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-
-      padding: 13px 0;
-
-      border-bottom: 1px solid #181818;
+    .pricing-link:hover {
+      background: #fff;
+      color: #000;
     }
 
-    .service {
-      font-size: 15px;
-      line-height: 1.4;
+    @media (max-width: 600px) {
+
+      /* Mobile:
+         crop 20% left/right
+         crop 20% top/bottom */
+      .banner-wrapper {
+        width: 100%;
+        aspect-ratio: 1214.4 / 466.2;
+      }
+
+      .banner {
+        width: 166.6667%;
+        max-width: none;
+        margin-left: -33.33335%;
+        transform: translateY(-20%);
+      }
+
+      .home-content {
+        margin-top: 28px;
+        padding: 0 16px;
+      }
+
+      .home-content h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+
+      .home-content p {
+        font-size: 15px;
+      }
     }
+  </style>
+</head>
 
-    .price {
-      flex-shrink: 0;
+<body>
 
-      font-size: 15px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+  <div class="banner-wrapper">
+    <img
+      class="banner"
+      src="grid2.png"
+      alt="GRID2"
+    >
+  </div>
 
-    /* =========================
-       CAMPAIGN PACKAGES
-       ========================= */
+  <main class="home-content">
 
+    <h1>MARKETING SHOULDN'T NEED A QUOTE.</h1>
+
+    <p>
+      Strategy. Creative. Digital.<br>
+      Transparent fixed pricing.
+    </p>
+
+    <a class="pricing-link" href="pricing.html">
+      VIEW PRICING
+    </a>
+
+  </main>
+
+</body>
+</html>
     .package {
       margin-bottom: 25px;
       padding: 20px;
