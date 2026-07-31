@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pricing | GRID2</title>
+
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+
+  <style>
+
+    /* =========================
+       GLOBAL
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* =========================
+       BANNER
+       Original: 2024 × 777
+       Desktop: bottom 20% cropped
+       ========================= */
+
+    .banner-wrapper {
+      width: 60%;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      aspect-ratio: 2024 / 621.6;
+    }
+
+    .banner-wrapper a {
+      display: block;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* =========================
+       PRICING CONTENT
+       ========================= */
+
+    .pricing {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto 80px;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 34px;
+      letter-spacing: 5px;
+      font-weight: 600;
+    }
+
+    .tagline {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .subline {
+      margin: 0;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       SECTIONS
+       ========================= */
+
+    .pricing-section {
+      margin-bottom: 55px;
+    }
+
+    .pricing-section h2 {
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+
+      font-size: 18px;
+      letter-spacing: 3px;
+      font-weight: 600;
+
+      border-bottom: 1px solid #333;
+    }
+
+    /* =========================
+       PRICE ROWS
+       ========================= */
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+
+      padding: 13px 0;
+
+      border-bottom: 1px solid #181818;
+    }
+
+    .service {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .price {
+      flex-shrink: 0;
+
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       CAMPAIGN PACKAGES
+       ========================= */
+
+    .package {
+      margin-bottom: 25px;
+      padding: 20px;
+
+      border: 1px solid #333;
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+
+      margin-bottom: 10px;
+    }
+
+    .package-name {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .package-price {
+      font-size: 17px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .package-description {
+      margin: 0;
+
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       PRICING PROMISE
+       ========================= */
+
+    .pricing-promise {
+      margin: 70px 0 50px;
+      text-align: center;
+    }
+
+    .pricing-promise h2 {
+      border: 0;
+      margin-bottom: 20px;
+
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+
+    .pricing-promise p {
+      max-width: 650px;
+      margin: 0 auto 12px;
+
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       HOME LINK
+       ========================= */
+
+    .home-link {
+      display: block;
+      width: fit-content;
+
+      margin: 60px auto 0;
+      padding: 10px 20px;
+
+      color: #fff;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .home-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      /* Central 60% width +
+         central 60% height */
+
+      .banner-wrapper {
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1214.4 / 466.2;
+      }
+
+      .banner {
+        width: 166.6667%;
+        max-width: none;
+        height: auto;
+
+        margin-left: -33.33335%;
+
+        transform: translateY(-20%);
+      }
+
+      .pricing {
+        width: 100%;
+        margin-top: 25px;
+        padding: 0 22px;
+      }
+
+      .intro {
+        margin-bottom: 45px;
+      }
+
+      h1 {
+        font-size: 27px;
+        letter-spacing: 4px;
+      }
+
+      .tagline {
+        font-size: 19px;
+        line-height: 1.4;
+      }
+
+      .subline {
+        font-size: 14px;
+      }
+
+      .pricing-section {
+        margin-bottom: 45px;
+      }
+
+      .price-row {
+        padding: 12px 0;
+        gap: 12px;
+      }
+
+      .service,
+      .price {
+        font-size: 14px;
+      }
+
+      .package {
+        padding: 17px;
+      }
+
+      .package-header {
+        gap: 10px;
+      }
+
+      .package-name,
+      .package-price {
+        font-size: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       GRID2 BANNER
+       Click to return home
+       ========================= -->
+
+  <div class="banner-wrapper">
+
+    <a href="index.html">
+
+      <img
+        class="banner"
+        src="grid2.png"
+        alt="GRID2"
+      >
+
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       PRICING
+       ========================= -->
+
+  <main class="pricing">
+
+    <section class="intro">
+
+      <h1>PRICING</h1>
+
+      <p class="tagline">
+        Marketing shouldn't need a quote.
+      </p>
+
+      <p class="subline">
+        Choose what you need. See what it costs. Get it done.
+      </p>
+
+    </section>
+
+
+    <!-- STRATEGY -->
+
+    <section class="pricing-section">
+
+      <h2>STRATEGY</h2>
+
+      <div class="price-row">
+        <span class="service">Marketing Consultation — 1 hour</span>
+        <span class="price">£75</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Marketing Audit</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">3-Month Content Plan</span>
+        <span class="price">£199</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Social Media Strategy</span>
+        <span class="price">£249</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Campaign Strategy</span>
+        <span class="price">£349</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Marketing Strategy</span>
+        <span class="price">£399</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Brand &amp; Positioning Sprint</span>
+        <span class="price">£495</span>
+      </div>
+
+    </section>
+
+
+    <!-- CREATE -->
+
+    <section class="pricing-section">
+
+      <h2>CREATE</h2>
+
+      <div class="price-row">
+        <span class="service">Social Post — Single</span>
+        <span class="price">£39</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Digital Banner — Single</span>
+        <span class="price">£49</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Reel / Short Video Edit</span>
+        <span class="price">£49</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Flyer / Leaflet</span>
+        <span class="price">£79</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Poster / Advert</span>
+        <span class="price">£79</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Website Copy — One Page</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Blog / Article</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Press Release</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Digital Banner Set — 5 Sizes</span>
+        <span class="price">£125</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Social Pack — 10 Posts</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Logo Refresh</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Digital Banner Set — 10 Sizes</span>
+        <span class="price">£199</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">5 Reel Edits</span>
+        <span class="price">£199</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Brochure Design</span>
+        <span class="price">from £199</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Presentation / Pitch Deck</span>
+        <span class="price">£199</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Animated Banner Set</span>
+        <span class="price">£249</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Photography — Half Day</span>
+        <span class="price">£295</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Brand Starter Kit</span>
+        <span class="price">£299</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">10 Reel Edits</span>
+        <span class="price">£349</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Photography — Full Day</span>
+        <span class="price">£495</span>
+      </div>
+
+    </section>
+
+
+    <!-- DIGITAL -->
+
+    <section class="pricing-section">
+
+      <h2>DIGITAL</h2>
+
+      <div class="price-row">
+        <span class="service">Meta Ads Account Setup</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Social Profile Setup</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">LinkedIn Company Page Setup</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Google Business Profile Setup</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Email Template</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Website Health Check</span>
+        <span class="price">£99</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Meta Campaign Setup</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Google Ads Setup</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Email Campaign</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Newsletter Setup</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Basic SEO Audit</span>
+        <span class="price">£149</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Meta Campaign + Creative</span>
+        <span class="price">£249</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Landing Page</span>
+        <span class="price">£299</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Meta Campaign + 5 Assets</span>
+        <span class="price">£349</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">5-Page Website</span>
+        <span class="price">£895</span>
+      </div>
+
+    </section>
+
+
+    <!-- CAMPAIGNS -->
+
+    <section class="pricing-section">
+
+      <h2>CAMPAIGNS</h2>
+
+      <div class="package">
+
+        <div class="package-header">
+          <span class="package-name">START</span>
+          <span class="package-price">£249</span>
+        </div>
+
+        <p class="package-description">
+          Campaign consultation, campaign plan and three social assets.
+        </p>
+
+      </div>
+
+
+      <div class="package">
+
+        <div class="package-header">
+          <span class="package-name">LAUNCH</span>
+          <span class="package-price">£495</span>
+        </div>
+
+        <p class="package-description">
+          Campaign concept, Meta setup, campaign copy and five creative assets.
+        </p>
+
+      </div>
+
+
+      <div class="package">
+
+        <div class="package-header">
+          <span class="package-name">CAMPAIGN</span>
+          <span class="package-price">£795</span>
+        </div>
+
+        <p class="package-description">
+          Strategy, creative concept, Meta campaign, digital banners,
+          social assets and launch support.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="pricing-section">
+
+      <h2>SUPPORT</h2>
+
+      <div class="price-row">
+        <span class="service">Marketing Support</span>
+        <span class="price">£595 / month</span>
+      </div>
+
+      <div class="price-row">
+        <span class="service">Marketing Partner</span>
+        <span class="price">£995 / month</span>
+      </div>
+
+    </section>
+
+
+    <!-- PRICING PROMISE -->
+
+    <section class="pricing-promise">
+
+      <h2>THE PRICE YOU SEE IS THE PRICE YOU PAY.</h2>
+
+      <p>
+        Every service has a defined scope, deliverables and price
+        before work begins.
+      </p>
+
+      <p>
+        No hourly billing. No mandatory retainers. No surprise agency fees.
+      </p>
+
+      <p>
+        Advertising spend, printing, travel and specialist third-party
+        costs are separate and agreed before they're incurred.
+      </p>
+
+    </section>
+
+
+    <!-- HOME -->
+
+    <a
+      class="home-link"
+      href="index.html"
+    >
+      BACK TO GRID2
+    </a>
+
+  </main>
+
+</body>
+</html>
